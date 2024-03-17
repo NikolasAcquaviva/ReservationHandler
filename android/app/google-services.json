@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "759635764833",
+    "firebase_url": "https://reservation-handler-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "reservation-handler",
+    "storage_bucket": "reservation-handler.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759635764833:android:95102235f50171106bec20",
+        "android_client_info": {
+          "package_name": "com.example.reservation_manager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtMbqh8ljUQNaPI-Pysb7MTxp1j1Sbb48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
