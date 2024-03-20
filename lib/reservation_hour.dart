@@ -430,7 +430,7 @@ class ReservationHourPageState extends State<ReservationHourPage> {
                                                           backgroundColor:
                                                               Colors.white,
                                                           initialDateTime: widget
-                                                              .selectedDay
+                                                              .selectedDay.withoutTime
                                                               .add(
                                                                   const Duration(
                                                                       hours:
@@ -498,7 +498,7 @@ class ReservationHourPageState extends State<ReservationHourPage> {
                                                                           onPressed:
                                                                               () async {
                                                                             
-                                                                              updateDate ??= widget.selectedDay.add(const Duration(hours: 8));
+                                                                              updateDate ??= widget.selectedDay.withoutTime.add(const Duration(hours: 8));
                                                                             List<Reservation>
                                                                                 hourDayReservations =
                                                                                 await appState.getDayHourReservations(updateDate!);
@@ -559,7 +559,7 @@ class ReservationHourPageState extends State<ReservationHourPage> {
                                                                                             await appState.reservationRepository.removeReservation(loggedUser.username, events.first.startTime!);
                                                                                             await appState.reservationRepository.addReservation(loggedUser.username, loggedUser.name, loggedUser.surname, updateDate!, updateDate!.hour);
                                                                                             if (context.mounted) {
-                                                                                              Navigator.pop(context);
+                                                                                                Navigator.pushAndRemoveUntil(context, CupertinoPageRoute(builder: (context) => ReservationHourPage(selectedDay: updateDate!)), (route) => route.isFirst);
                                                                                             }
                                                                                             await sendEmailCalendarChange(loggedUser.name, loggedUser.surname, events.first.startTime, updateDate!, CalendarChangeOperation.timeChange);
                                                                                           },

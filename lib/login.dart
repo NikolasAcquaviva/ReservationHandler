@@ -168,8 +168,7 @@ class LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       Navigator.push(
                           context,
-                          CupertinoModalPopupRoute(                              
-                              anchorPoint: Offset(0,40),
+                          CupertinoModalPopupRoute(    
                               builder: (context) => CupertinoActionSheet(
 
                                     title: const Center(
